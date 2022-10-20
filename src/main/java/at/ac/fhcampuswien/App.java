@@ -17,6 +17,7 @@ public class App {
         //---------Aufgabe 1 --------------
         oneMonthCalendar(31, 3);
 
+
         //--------Aufgabe 2 ---------------
         long seed_num = 0;
         long[] a = lcg(seed_num);
@@ -66,7 +67,7 @@ public class App {
 
         //Zahlen und die Werte definieren
         long[] arr = new long[10];
-        long a = 1103525345;
+        long a = 1103515245;
         long c = 12345;
         double m = Math.pow(2, 31);
         long m_long = (new Double(m)).longValue();
@@ -76,8 +77,8 @@ public class App {
             if (i == 0) {
                 arr[i] = (a * seed + c) % m_long;
             } else {
-                //formel
-                arr[i] = ((a * arr[i - 1]) + c) % m_long;
+                //formel einsetzen
+                arr[i] = (a * arr[i - 1] + c) % m_long;
             }
         }
         return arr;
