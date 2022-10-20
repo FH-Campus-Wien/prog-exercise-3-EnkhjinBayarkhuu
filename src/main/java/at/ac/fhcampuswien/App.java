@@ -17,6 +17,7 @@ public class App {
         //---------Aufgabe 1 --------------
         oneMonthCalendar(31, 3);
 
+
         //--------Aufgabe 2 ---------------
         long seed_num = 0;
         long[] a = lcg(seed_num);
