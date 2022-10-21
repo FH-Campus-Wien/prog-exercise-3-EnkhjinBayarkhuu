@@ -29,7 +29,16 @@ public class App {
         //----------Aufgabe 3 ---------------
         int rand_number = randomNumberBetweenOneAndHundred();
         guessingGame(rand_number);
+
+
+        //----------Aufgabe 4 ---------------
+        int[] Array1 = {1,2,3,4,5};
+        int[] Array2 = {100,99,60,44,2};
+
+        swapArrays(Array1, Array2);
+
     }
+
 
     public static void oneMonthCalendar(int numberDay, int startingDay) {
         int line = 0;
@@ -117,6 +126,51 @@ public class App {
          return  random;
 
         }
+
+        /*
+        public static  boolean swapArrays(int[] Array1, int[] Array2){
+
+        int i;
+
+        int [] arr1_swap = Array1;
+        int [] arr2_swap = Array2;
+
+        if( Array1.length != Array2.length )
+        {
+            return false;
+        }
+        else {
+        for(i = 0; i < 5; i++)
+        {
+            Array1[i] = Array1[i] + Array2[i];
+            Array2[i] = Array1[i] - Array2[i];
+            Array1[i] = Array1[i] - Array2[i];
+        }
+
+         return true;
+
+        }
+
+         */
+        public static boolean swapArrays( int[] arr1, int[] arr2)
+        {
+            int swap;
+
+            if( arr1.length != arr2.length )
+            {
+                return false;
+            }
+
+            for( int i = 0; i < arr1.length; i++ )
+            {
+                swap = arr1[i];
+                arr1[i] = arr2[i];
+                arr2[i] = swap;
+            }
+
+            return true;
+        }
+
 
     }
 
